@@ -1,0 +1,47 @@
+*
+{
+	border: None;
+	border-radius: 0px;
+	font-family: JetBrains Mono;
+	font-size: 15px;
+    	font-weight: bold;
+	min-height: 0px;
+}
+
+window#waybar {
+	background-color: #000000;
+	
+}
+#window,
+#workspaces {
+	padding: 0px 4px;
+	margin: 4px 4px;
+}
+#workspaces button {
+	padding: 0px 4px;
+	border-radius: 0px;
+	background-color: #000000;
+	color: #ffffff;
+}
+#workspaces button.focused {
+	background-color: #000000;
+	color: #ffffff;
+}
+#window,
+#language,
+#backlight,
+#battery,
+#clock,
+#temperature,
+#pulseaudio {
+	padding: 0px 6px;
+	border-radius: 0px;
+	margin: 4px 4px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#battery.charging,
+#battery.plugged {
+	background-color: #4fc480;
+}

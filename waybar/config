@@ -1,0 +1,64 @@
+{
+	"layer": "top",
+	"height": 29,
+
+	"modules-left": [
+		"sway/workspaces", 
+		"sway/mode"
+	],
+	"modules-center":[
+		"sway/window"
+],
+	"modules-right": ["sway/language",
+		"temperature",
+		"pulseaudio",
+		"backlight",
+		"battery",
+		"clock",
+		"tray"
+	],
+		"temperature": {
+		"thermal-zone": 1,
+		"hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°",
+		"format": "T:{temperatureC}°",
+		"interval": 2
+	},
+
+	"sway/window": {
+		"max-length": 50
+	},
+	"pulseaudio": {
+		"format": "V:{volume}%",
+		"scroll-step": 5,	
+		"on-click": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-click-right": "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+	},
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "L:{percent}%",
+		"on-click": "brightnessctl -q set 10%-",
+		"on-click-right": "brightnessctl -q set +10%",
+		"on-scroll-up": "brightnessctl -q set +1%",
+		"on-scroll-down": "brightnessctl -q set 1%-"
+	},
+
+	"battery": {
+		"format": "B:{capacity}%"
+	},
+
+	"clock": {
+		"format-alt": "{:%d/%m/%Y %R}",
+		"tooltip-format": "{:%d/%m/%Y %R}"
+	},
+	"tray": {
+		 "icon-size": 21,
+		 "spacing": 10
+		},
+	"sway/language": { "format":"{}",
+		"max-length": 50
+		},
+}
+
