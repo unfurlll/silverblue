@@ -22,6 +22,7 @@ neofetch
 gnome-tweaks
 alsa-utils
 rofi
+light
 ```
 
 ###
